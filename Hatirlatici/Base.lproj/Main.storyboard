@@ -28,6 +28,7 @@
                                             <barButtonItem key="rightBarButtonItem" title="Item" image="plus.circle.fill" catalog="system" id="2bE-ZB-bx8">
                                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                                 <connections>
+                                                    <action selector="addBarButton:" destination="tz9-tC-fy6" id="jAl-es-fKp"/>
                                                     <segue destination="fsq-bk-Sju" kind="presentation" id="V6i-Lo-Cxc"/>
                                                 </connections>
                                             </barButtonItem>
@@ -94,13 +95,14 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="tz9-tC-fy6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Reminder View Controller-->
         <scene sceneID="fMb-Zq-5u5">
             <objects>
-                <tableViewController id="H10-99-c2Q" sceneMemberID="viewController">
+                <tableViewController id="H10-99-c2Q" customClass="AddReminderViewController" customModule="Hatirlatici" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fqK-Bd-WoF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +122,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
+                                                        <action selector="titleTextField:" destination="H10-99-c2Q" eventType="editingDidEnd" id="9Ya-zG-FEb"/>
                                                         <outlet property="delegate" destination="H10-99-c2Q" id="UMz-ee-ieB"/>
                                                     </connections>
                                                 </textField>
@@ -159,6 +162,10 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ezY-sj-3Eo">
                                                     <rect key="frame" x="345" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="remindMeSwitch:" destination="H10-99-c2Q" eventType="valueChanged" id="3Rl-Uo-cMa"/>
+                                                        <action selector="remindMeSwitchValueChanged:" destination="H10-99-c2Q" eventType="valueChanged" id="pGC-jK-FDV"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -203,6 +210,11 @@
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ykt-JN-0AD">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                                     <locale key="locale" localeIdentifier="tr"/>
+                                                    <connections>
+                                                        <action selector="datePicker:" destination="H10-99-c2Q" eventType="valueChanged" id="Gcs-RF-Ph6"/>
+                                                        <action selector="datePickerValueChanged:" destination="H10-99-c2Q" eventType="valueChanged" id="Cji-DM-BqC"/>
+                                                        <action selector="remindMeSwitch:" destination="H10-99-c2Q" eventType="valueChanged" id="MVR-Wt-5eG"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -229,6 +241,13 @@
                             <color key="tintColor" systemColor="systemOrangeColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addBarButton" destination="Q9p-kh-J1S" id="3aF-MN-aIY"/>
+                        <outlet property="dateLabel" destination="Wsc-DE-cXN" id="4QJ-Vd-e3I"/>
+                        <outlet property="datePicker" destination="Ykt-JN-0AD" id="PqO-a9-rge"/>
+                        <outlet property="remindMeSwitch" destination="ezY-sj-3Eo" id="U6x-Rc-TZG"/>
+                        <outlet property="titleTexField" destination="SJ5-Pa-lC3" id="vPP-xn-b3D"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42Z-kw-PQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
