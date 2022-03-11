@@ -117,22 +117,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Başlık" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJ5-Pa-lC3" userLabel="Title Text Field">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Başlık" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-vd-3Bl">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="titleTextField:" destination="H10-99-c2Q" eventType="editingDidEnd" id="9Ya-zG-FEb"/>
-                                                        <outlet property="delegate" destination="H10-99-c2Q" id="UMz-ee-ieB"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="SJ5-Pa-lC3" firstAttribute="leading" secondItem="mfs-Ri-7cw" secondAttribute="leading" constant="20" id="4GK-gH-DET"/>
-                                                <constraint firstAttribute="bottom" secondItem="SJ5-Pa-lC3" secondAttribute="bottom" id="513-Z6-Hqs"/>
-                                                <constraint firstAttribute="trailing" secondItem="SJ5-Pa-lC3" secondAttribute="trailing" constant="20" id="WzA-Lp-YnF"/>
-                                                <constraint firstItem="SJ5-Pa-lC3" firstAttribute="top" secondItem="mfs-Ri-7cw" secondAttribute="top" id="bHg-dr-1Gd"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -252,7 +243,7 @@
                         <outlet property="dateLabel" destination="Wsc-DE-cXN" id="4QJ-Vd-e3I"/>
                         <outlet property="datePicker" destination="Ykt-JN-0AD" id="PqO-a9-rge"/>
                         <outlet property="remindMeSwitch" destination="ezY-sj-3Eo" id="U6x-Rc-TZG"/>
-                        <outlet property="titleTexField" destination="SJ5-Pa-lC3" id="vPP-xn-b3D"/>
+                        <outlet property="titleTextField" destination="yzg-vd-3Bl" id="i6q-Ta-VX1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42Z-kw-PQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

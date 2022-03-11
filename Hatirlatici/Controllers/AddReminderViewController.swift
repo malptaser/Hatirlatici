@@ -10,6 +10,7 @@ import UIKit
 class AddReminderViewController: UITableViewController {
     
     // MARK: - UI Elements
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var remindMeSwitch: UISwitch!
     @IBOutlet weak var dateLabel: UILabel!
