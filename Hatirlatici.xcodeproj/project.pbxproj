@@ -73,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				698F7B6127D8EA99007E0A70 /* Assets.xcassets */,
-				698F7B6627D8EA99007E0A70 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -116,6 +115,7 @@
 		698F7B5727D8EA99007E0A70 /* Hatirlatici */ = {
 			isa = PBXGroup;
 			children = (
+				698F7B6627D8EA99007E0A70 /* Info.plist */,
 				6944421927DBB7CD0014E8D3 /* Storyboards */,
 				698F7B7327DB992F007E0A70 /* Controllers */,
 				698F7B6E27DB9641007E0A70 /* Views */,
