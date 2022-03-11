@@ -236,9 +236,15 @@
                     <navigationItem key="navigationItem" id="ISc-sN-xdG">
                         <barButtonItem key="leftBarButtonItem" title="Vazgeç" id="fS2-BT-Lbn">
                             <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <action selector="cancelBarButtonTapped:" destination="H10-99-c2Q" id="VJO-1j-oeM"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Ekle" style="done" id="Q9p-kh-J1S">
                             <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <action selector="addBarButtonTapped:" destination="H10-99-c2Q" id="Mdh-Oe-IMQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
